@@ -20,3 +20,14 @@ var loadEvents = function (slotsTime) {
         
     });
 }
+
+var fetchEvents = function() {
+    var tempArray = [];
+    $(textarea).each(function (index, elem) {
+        tempArray.push({
+            time: $(elem).attr("id"),
+            text: $(elem),
+        });
+    });
+    loadEvents(tempArray);
+};
