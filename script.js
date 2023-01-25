@@ -49,7 +49,7 @@ $("textarea").each(function () {
     }
 });
 
-$("button.saveBtn").click(function (event, loadEvents)) {
+$("button.saveBtn").click(function (event, loadEvents) {
     event.preventDefault():
 
     var $element = $(this).siblings("textarea");
@@ -59,4 +59,15 @@ $("button.saveBtn").click(function (event, loadEvents)) {
 
     var text = $element.val().trim();
     console.log(text);
-}
+
+    if (time && text !== "") {
+        console.log(time, text);
+        localStorage.setItem(time, text);
+    }
+});
+
+$(".saveBtn").hover(function() {
+    $(this).addClass("saveBtn:hover");
+});
+
+fetchEvents();
