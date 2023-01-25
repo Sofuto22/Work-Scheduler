@@ -50,7 +50,7 @@ $("textarea").each(function () {
 });
 
 $("button.saveBtn").click(function (event, loadEvents) {
-    event.preventDefault():
+    event.preventDefault();
 
     var $element = $(this).siblings("textarea");
 
