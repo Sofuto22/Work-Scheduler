@@ -48,3 +48,15 @@ $("textarea").each(function () {
         $this.addClass("present");
     }
 });
+
+$("button.saveBtn").click(function (event, loadEvents)) {
+    event.preventDefault():
+
+    var $element = $(this).siblings("textarea");
+
+    var time = $element.attr("id");
+    console.log(time);
+
+    var text = $element.val().trim();
+    console.log(text);
+}
